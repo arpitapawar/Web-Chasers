@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta http-equi="Content-Type" context="text/html" charset="utf-8"/>
+		<title>project</title>
+		
+		<link rel="stylesheet" href="{{url_for('static', filename='adres_des.css')}}">
+         <style>
+			 #ri{
+				 position: absolute;
+				 top:10px;
+				 right:10px;
+				 
+			 }
+
+button:hover {
+  opacity: 0.8;
+}
+		 </style>
+	</head>
+	
+	<body>
+		
+		<img  src="{{url_for('static', filename='main.jpeg')}}" width="100%" height="600"><br>
+		<div id="ri">
+       <a href="/adres">Add Restaurant</a>
+	   
+       
+	   <a href="/login">  <h1>Log in</h1></a>
+       <button type="button" name="sign" class="btn btn-info btn-lg mx-auto" onclick="document.getElementById('register').style.display='block'">Sign up</button> </div>
+       <div id="register" class="modal1">
+  
+        <form class="modal-content animate" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+			<label for="mail"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
+			<label for="number"><b>Contact Number</b></label>
+            <input type="text" placeholder="Enter Contact Number" name="cont" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="pass" required>
+            <button type="submit">Creat Account</button>
+          </div>
+      
+        </form>
+      </div>
+       <div id="login" class="modal">
+  
+        <form class="modal-content animate" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Login</button>
+          </div>
+      
+        </form>
+       </div>
+		
+	  
+		<i><h1><u>Cities We Deliver to </u></h1></i>
+		<table align="center" width="80%" border="0" cellspacing="1" cellpadding="1">
+			
+			<tr>
+				<td><h3>Delhi NCR</h3></td>
+				<td><h3>Mumbai</h3></td>
+				<td><h3>Kolkata</h3></td>
+				<td><h3>Bengaluru</h3></td>
+				<td><h3>Pune</h3></td>
+			</tr>
+			<tr>
+				<td><h3>Hyderbad</h3></td>
+				<td><h3>Lucknow</h3></td>
+				<td><h3>Chennai</h3></td>
+				<td><h3>Kochi</h3></td>
+				<td><h3>Jaipur</h3></td>
+			</tr>
+			<tr>
+				<td><h3>Ooty</h3></td>
+				<td><h3>Shimla</h3></td>
+				<td><h3>Ludhiana</h3></td>
+				<td><h3>Guwahati</h3></td>
+				<td><h3>Amritsar</h3></td>
+			</tr>
+			<tr>
+				<td><h3>Visakhapatnam</h3></td>
+				<td><h3>Bhubaneswar</h3></td>
+				<td><h3>Coimbatore</h3></td>
+				<td><h3>Mangalore</h3></td>
+				<td><h3>Vadodara</h3></td>
+			</tr>
+			<tr>
+				<td><h3>Nagpur</h3></td>
+				<td><h3>Agra</h3></td>
+				<td><h3>Dehradun</h3></td>
+				<td><h3>Mysore</h3></td>
+				<td><h3>Puducherry</h3></td>
+			</tr>
+			<tr>
+				<td><h3>Surat</h3></td>
+				<td><h3>Varanasi</h3></td>
+				<td><h3>Udaipur</h3></td>
+				<td><h3>Cuttack</h3></td>
+				<td><h3>Patna</h3></td>
+				<tr>
+					<td><h3>Madhurai</h3></td>
+					<td><h3>Ajmer</h3></td>
+					<td><h3>Manipur</h3></td>
+					<td><h3>Jodhpur</h3></td>
+					<td><h3>Manipal</h3></td>
+					<tr>
+						<td><h3>Leh</h3></td>
+						<td><h3>Patna</h3></td>
+						<td><h3>Ripur</h3></td>
+						<td><h3>Jhalandar</h3></td>
+						<td><h3>Kota</h3></td>
+					</tr>
+					<tr>
+						<td><h3>Manali</h3></td>
+						<td><h3>Mussorie</h3></td>
+						<td><h3>Rajkot</h3></td>
+						<td><h3>Rishikesh</h3></td>
+						<td><h3><u>Many More</u></h3></td>
+					</tr>
+				</tr>
+			</tr>
+		</table>
+		<br><br>
+		  <table width="100%" height="170" border="0" cellspacing="5" cellpadding="5" bgcolor="#e5f2f8">
+			<tr>
+				<td height="72" align="center" valign="top">
+				<table width="70%" border="0"  cellspacing="0" cellpadding="8">
+				<tr>
+				<td width="296" align="center"><font face="Veranda,Geneva and sans-serif" color="black" size="5"><strong><u>OUR VISION</u></strong></font></td>
+				<td width="296" align="center"><font face="Veranda,Geneva and sans-serif" color="black" size="5"><strong><u>About Us</u></strong></font></td>
+				<td width="296" align="center"><font face="Veranda,Geneva and sans-serif" color="black" size="5"><strong><u>SERVICES</u></strong></font></td>
+				</tr>
+				<tr>
+				<td align="center"><font face="Veranda,Geneva and sans-serif" color="black" size="3">Our aim is to have an easy search for the restaurants near you withinn 3km. To get the fastest,safest,and east deliver.</font></td>
+				<td align="center"><font face="Veranda,Geneva and sans-serif" color="black" size="3">To make our customer explore new outlets,restaurants available near them.Easy search with delivery options available</font></td>
+				<td  valign="top"> <font face="Veranda,Geneva and sans-serif" color="black" size="3">
+				<ul>
+					<li>Easy search for restaurants near you<br/></li>
+					<li>Get the food of your choice<br/></li>
+					<li>Safe and fast delivery<br/></li>
+					<li>Explore Differents restaurants and food<br/></li>
+					</ul></font> </td>
+				</tr>
+				</table>
+				</td>
+			</tr>
+			</table>
+			<table width="100%" height="60" border="0" cellspacing="5" cellpadding="5" bgcolor="#e5f2f8">
+			<tr>
+				<td align="left"><img src="{{url_for('static', filename='resto.jpeg')}}" width="160" height="50"/></td>
+				<td align="center">
+			<font face="Veranda,Geneva and sans-serif" color="black">Email id: <u>restohunt@gmail.com</u></font></td>
+			<td align="right">
+			<font face="Veranda,Geneva and sans-serif" color="black">Contact Us:1800-000-381</font>
+				</td>
+			
+			</tr>
+			</table>
+    </body>
+	<script>
+		// Get the modal
+    var modal1 = document.getElementById('register');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal1) {
+            modal1.style.display = "none";
+        }
+    }  
+		var modal = document.getElementById('login');
+		
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+		</script>
+    
+   </html>

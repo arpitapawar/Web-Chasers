@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        .img1{
+            position:relative;
+          width:1520px;
+            }
+            .but{
+                position: absolute;
+                top:10%;
+                left:10%;
+            }
+            .cart{
+                background-color: brown;
+            }
+            .second{
+                position: absolute;
+                width:100%;
+                height:700px;
+                background-color:#FFBD14;
+            }
+            .box1{
+                position: relative;
+                width:390px;
+                height:500px;
+                background-color: aliceblue;
+                top:15%;
+                bottom:5%;
+                left:25%;
+
+            }
+            .box1img{
+               position: relative;
+                width:363px;
+                height:473px;
+                margin:4%;
+
+            }
+            .box2{
+               position: absolute;
+               top:20%;
+                width:490px;
+                height:300px;
+                left:30%;
+                background-color: aliceblue; 
+            }
+            .third{
+                margin-top:10%;
+                margin-left: 7%;
+                margin-right: 7%;
+                display: flex;
+                text-align: center;
+            }
+            .icon{
+                border-radius: 8%;
+                width:300px;
+                height:300px;
+            }
+            .th{
+                margin-top:3%; 
+                margin-bottom: 4%;
+            }
+            .footer{
+               width:100%;
+               height:400px;
+               background-color: #FFDEEA; 
+            }
+            .fbox{
+                display: flex;
+                position: absolute;
+                margin-left:9%;
+                margin-top: 3.5%;
+                background-color: #7D1935;
+                width:80%;
+                height:250px;
+                justify-content: space-between;
+                padding-top: 3%;
+                color: aliceblue;
+                font-size: large;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .item{
+                text-decoration: none;
+            }
+           
+    </style>
+</head>
+<body>
+       <div>
+        <img class="img1" src="{{url_for('static', filename='homeimg3.png')}}" alt="" >
+        <button  class="but" onclick="getLocation()">Get Location</button>
+        <p class="demo"></p>
+       </div>
+         <div class="second">
+             <div class="box1">
+                 <img class="box1img" src="{{url_for('static', filename='box1.png')}}" alt="" >
+                 <div class="box2"></div>
+             </div>
+         </div>
+         <div class="third">
+             <div>
+                <img src="{{url_for('static', filename='BURGER.jpg')}}" alt="" >
+                 
+             </div>
+         </div>
+         <form method="POST" autocomplete="on" >
+         <div class="third">
+            <div><a class="item" href="/rest"><img class="icon" src="{{url_for('static', filename='BURGER.jpg')}}" alt="" >
+                 <textarea id="w3review" name="bug" rows="4" cols="50">burger</textarea></a></div>
+            <div><a class="item" name="pizza" href="/rest"><img class="icon" src="{{url_for('static', filename='pizza1.jpg')}}" alt="" > <input type="text" name="bug" value="pizza" ></a></div>
+            <div><img class="icon" src="{{url_for('static', filename='noddles.jpg')}}" alt="" >CHINESE</div>
+            <div><img class="icon" src="{{url_for('static', filename='chicken.jpg')}}" alt="" >CHICKEN</div>
+        </div>
+        <div class="third th">
+            <div><img class="icon" src="{{url_for('static', filename='biryani.jpg')}}" alt="" >BIRYANI</div>
+            <div><img class="icon" src="{{url_for('static', filename='chaat.jpg')}}" alt="" >CHAT</div>
+            <div><img class="icon" src="{{url_for('static', filename='cake.jpg')}}" alt="" >CAKE</div>
+            <div><img class="icon" src="{{url_for('static', filename='icecream.jpg')}}" alt="" >ICECREAM</div>
+        </div>
+    </form>
+        <div class="footer">
+         <div class="fbox">
+            
+             <div><p><h2>Need Help?</h2><br>Visit our Customer Support <br>for assistance or call us at<br>123-456-7890</p></div>
+             <div><p><h2>Category </h2><br>Pizza <br>Burger <br> Chinese <br> Cake <br> Chaat </p></div>
+             <div><p><h2>Info</h2> <br>FAQ <br> About Us <br> Locations <br></p></div>
+             <div><p><h2>WE'RE OPEN </h2><br> Monday-Sunday <br>12pm-12am</p></div> 
+           
+         </div>
+        </div>
+</body>
+<script>
+    var x = document.getElementsByClassName("demo");
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    function showPosition(position) {
+                window.m = position.coords.latitude
+                window.q = position.coords.longitude
+                //x.innerHTML = "Latitude: " + m + "<br>Longitude: " + q;
+                //getDistanceFromLatLonInKm(19.695766,72.758476,'km');
+        }
+    </script>
+</html>
